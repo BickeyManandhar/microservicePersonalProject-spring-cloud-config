@@ -1,8 +1,3 @@
-spring:
-  config:
-    activate:
-      on-profile: "qa" #naming the profile
-
 build:
   version: "2.0"
 

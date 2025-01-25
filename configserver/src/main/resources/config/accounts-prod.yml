@@ -1,13 +1,8 @@
-spring:
-  config:
-    activate:
-      on-profile: "prod" #naming the profile
-
 build:
   version: "3.0"
 
-#  this will be prefix for LoansContactInfoDto
-loans:
+#  this will be prefix for AccountsContactInfoDto
+accounts:
   message: "Welcome to the PROD Env."
   env: "PROD"
   contactDetails:

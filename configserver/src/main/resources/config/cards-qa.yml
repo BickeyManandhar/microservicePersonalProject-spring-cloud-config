@@ -1,13 +1,8 @@
-spring:
-  config:
-    activate:
-      on-profile: "qa" #naming the profile
-
 build:
   version: "2.0"
 
-#  this will be prefix for LoansContactInfoDto
-loans:
+#  this will be prefix for CardsContactInfoDto
+cards:
   message: "Welcome to the QA env."
   env: "QA"
   contactDetails:
