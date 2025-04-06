@@ -2,13 +2,20 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native #when we are using classpath to store all our config we need to activate this native profile
+#    active: native #when we are using classpath location or file system location(see below) to store all our config we need to activate this native profile
+    active: git #when we are using github(see below) to store all our config we need to activate this git profile
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config" #giving the config location
-
+        git:
+          uri: "https://github.com/BickeyManandhar/spring-cloud-config.git"
+          default-label: "main" # mention default github branch
+          timeout: 5 #giving 5 sec timout to connect to the config files
+          clone-on-start: true #this will clone the configs from github at start
+          force-pull: true #if there has been remote changes to the config we pulled,then we may have stale config locally,so this helps to get the latest config by pulling
+#        native:
+#          search-locations: "classpath:/config" #giving the config location
+#          search-locations: "file:///B://UdemyMicroserviceProject//fileSystemLocationForConfig//config" #giving configurations from a file system location
 server:
   port: 8071
 
