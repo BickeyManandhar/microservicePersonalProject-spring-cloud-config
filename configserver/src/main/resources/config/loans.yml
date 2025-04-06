@@ -1,7 +1,7 @@
 build:
   version: "1.0"
 
-#  this will be prefix for LoasContactInfoDto
+#  this will be prefix for LoansContactInfoDto
 loans:
   message: "Welcome to my banking project."
   env: "Default"
